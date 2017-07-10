@@ -97,6 +97,15 @@ textarea {
 
 /*start of common rules*/
 
+body {
+    background-color: #1E1E1E;
+    color: white;
+}
+
+.versus p, .arene {
+    margin: 0;
+}
+
 /*Enc of common rules*/
 
 /*START OF HEADER*/
@@ -104,6 +113,52 @@ textarea {
 /*END OF HEADER*/
 
 /*START OF SECTION*/
+
+.name {
+    display: flex;
+    justify-content: space-around;
+}
+
+.choix figure {
+    margin: 10px 0;
+    padding: 0;
+    /*width: 100%;*/
+    /*background-color: yellow;*/
+}
+
+.choix img {
+    width : 100%;
+}
+
+.choix{
+    /*background-color: red;*/
+    text-align: center;
+}
+
+.player, .ordi {
+    /*background-color: green;*/
+}
+
+.versus {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.versus p {
+}
+
+.arene {
+    left : 0;
+    height: 150px;
+    background-color: green;
+}
+
+.score {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-around;
+}
 
 /*END OF SECTION*/
 
@@ -124,6 +179,10 @@ textarea {
 
     /*START OF SECTION*/
 
+    .player, .ordi {
+        /*background-color: blue;*/
+    }
+
     /*END OF SECTION*/
 
     /*START OF FOOTER*/
@@ -132,8 +191,9 @@ textarea {
 }
 
 /*~~~~~ START OF DESK ~~~~~*/
-@media (min-width: 1024px) {
+@media (min-width: 992px) {
     /*start of common rules*/
+
 
     /*Enc of common rules*/
 
@@ -142,6 +202,24 @@ textarea {
     /*END OF HEADER*/
 
     /*START OF SECTION*/
+
+    .choix figure {
+        margin : 0 10px;
+    }
+
+    .player, .ordi {
+        /*background-color: grey;*/
+    }
+
+    .player section, .ordi section {
+        display: flex;
+        align-items: center;
+        margin: 15% 0;
+    }
+
+    .arene {
+        height: 200px;
+    }
 
     /*END OF SECTION*/
 

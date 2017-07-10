@@ -26,7 +26,7 @@
 
         <header>
             <figure>
-                <img src="img/PiFeCi_Logo.gif" alt="logo animé pierre feuille ciseaux">
+                <!-- <img src="img/PiFeCi_Logo.gif" alt="logo animé pierre feuille ciseaux"> -->
             </figure>
             <div class="title">
                 <p>The Ultimate</p>
@@ -47,24 +47,28 @@
 
         <!-- START OF SECTION -->
 
-        <section>
+        <section class="container-fluid">
 
             <!-- Start the game -->
 
-            <div>
+            <!--<div class="start">
                 <input type="button" class="go" value="LET'S PLAY!">
             </div>
-            <div>
+            <div class="start">
                 <label for="pseudo">Enter your player name :</label><br>
                 <input type="text" name="pseudo" id="pseudo" placeholder="Your pseudo...">
                 <input type="button" value="GO!">
-            </div>
+            </div>-->
 
             <!-- Choix -->
 
-            <div class="choix">
-                <article class="player">
-                    <p class="playerName"></p>
+            <div class="name">
+                <p class="playerName">PLAYEUR 1</p>
+                <p>ORDI</p>
+            </div>
+
+            <div class="row choix">
+                <article class="offset-md-1 offset-lg-0 col-5 col-md-3 col-lg-5 player">
                     <section>
                         <figure>
                             <img src="img/PiFeCi_Joueur_Pierre.jpg" alt="">
@@ -78,8 +82,16 @@
                     </section>
                 </article>
 
-                <article class="ordi">
-                    <p>Ordi</p>
+                <article class="col-2 col-md-4 col-lg-2 versus">
+                    <p>V</p>
+                    <p>E</p>
+                    <p>R</p>
+                    <p>S</p>
+                    <p>U</p>
+                    <p>S</p>
+                </article>
+
+                <article class="col-5 col-md-3 col-lg-5 ordi">
                     <section>
                         <figure>
                             <img src="img/PiFeCi_Ordi_Pierre.jpg" alt="">
@@ -97,7 +109,6 @@
             <!-- Zone de combat -->
 
             <div class="arene">
-                <p>VERSUS</p>
                 <section>
                     <figure><img src="" alt=""></figure>
                     <figure><img src="" alt=""></figure>
@@ -106,10 +117,10 @@
 
             <!-- Score -->
 
-            <div>
-                <p class="scorePlayer"></p>
+            <div class="score">
+                <p class="scorePlayer">0</p>
                 <p class="tiret">-</p>
-                <p class="scoreOrdi"></p>
+                <p class="scoreOrdi">0</p>
             </div>
 
         </section>
