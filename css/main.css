@@ -100,10 +100,16 @@ textarea {
 body {
     background-color: #1E1E1E;
     color: white;
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
 }
 
 .versus p, .arene {
     margin: 0;
+}
+
+.hidden {
+    display: none;
 }
 
 /*Enc of common rules*/
@@ -114,6 +120,44 @@ body {
 
 /*START OF SECTION*/
 
+.main {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+}
+
+.start, .finish {
+    background-color: black;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    position: absolute;
+    border: 5px solid white;
+}
+
+.one{
+    /*background-color: darkgrey;*/
+    z-index: 100;
+}
+
+.two, .finish {
+    /*background-color: lightgrey;*/
+    z-index: 50;
+}
+
+.start input {
+    /*height: 30px;*/
+    /*width: 150px;*/
+    width: auto;
+    color: black;
+    align-self: center;
+    text-align: center;
+}
+
 .name {
     display: flex;
     justify-content: space-around;
@@ -122,21 +166,28 @@ body {
 .choix figure {
     margin: 10px 0;
     padding: 0;
-    /*width: 100%;*/
-    /*background-color: yellow;*/
+    transition: .3s;
+    border-radius: 5%;
+    overflow: hidden;
+    max-height: 20%;
 }
 
 .choix img {
     width : 100%;
+    height: 100%;
 }
 
 .choix{
     /*background-color: red;*/
-    text-align: center;
+    /*text-align: center;*/
 }
 
 .player, .ordi {
     /*background-color: green;*/
+}
+
+.player figure:hover {
+    filter: invert(1);
 }
 
 .versus {
@@ -151,13 +202,19 @@ body {
 .arene {
     left : 0;
     height: 150px;
-    background-color: green;
+    /*background-color: green;*/
 }
 
 .score {
     margin-top: 15px;
     display: flex;
     justify-content: space-around;
+    background-color: black;
+}
+
+.score p {
+    margin: auto;
+    padding: 20px;
 }
 
 /*END OF SECTION*/
@@ -181,6 +238,17 @@ body {
 
     .player, .ordi {
         /*background-color: blue;*/
+    }
+
+    .player section, .ordi section {
+        display: flex;
+        justify-content: space-between;
+        /*align-items: center;*/
+        margin: 10% 0;
+    }
+
+    .player section figure, .ordi section figure {
+        margin: 0 auto;
     }
 
     /*END OF SECTION*/
@@ -211,11 +279,11 @@ body {
         /*background-color: grey;*/
     }
 
-    .player section, .ordi section {
+    /*.player section, .ordi section {
         display: flex;
         align-items: center;
         margin: 15% 0;
-    }
+    }*/
 
     .arene {
         height: 200px;
