@@ -2,7 +2,8 @@ var startOne = document.getElementsByClassName("start")[0];
 var startTwo = document.getElementsByClassName("start")[1];
 var choix = ["Pierre", "Feuille", "Ciseaux"];
 
-var sj = so = 0;
+var so = 0;
+var sj = 0;
 var og = "ORDI WIN > > >";
 var jg = "< < < YOU WIN";
 var eg = "> > > < < <"
@@ -20,7 +21,6 @@ function Start(){
 function StartPlay(){
   choosePlayerName();
   startTwo.classList.add("hidden");
-  // playerChoice();
 }
 
 
@@ -54,7 +54,6 @@ function gameStart(x){
   document.getElementById("imgOrdi").src = "img/PiFeCi_Ordi_"+choix[ordi]+".jpg";
 
   // --> x et ordi = 0/1/2
-  // console.log(x, ordi);
 
   if( ((x==0)&&(ordi==1)) || ((x==1)&&(ordi==2)) || ((x==2)&&(ordi==0)) ){
     so++;
@@ -86,11 +85,14 @@ function theEnd(){
 }
 
 function reset(){
-  var sj = so = 0;
+  so = 0;
+  sj = 0;
   document.getElementById("scoreOrdi").innerHTML = so;
   document.getElementById("scorePlayer").innerHTML = sj;
   document.getElementById("tiret").innerHTML = "-";
   document.getElementById("finish").classList.add("hidden");
   startTwo.classList.remove("hidden");
   startOne.classList.remove("hidden");
+  document.getElementById("imgJoueur").src = "";
+  document.getElementById("imgOrdi").src = "";
 }
