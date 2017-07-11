@@ -1,7 +1,6 @@
 var startOne = document.getElementsByClassName("start")[0];
 var startTwo = document.getElementsByClassName("start")[1];
-// var startInput = startOne.getElementsByClassName("go")[0];
-// var startPlay = startTwo.getElementsByClassName("go")[0];
+var choix = ["Pierre", "Feuille", "Ciseaux"];
 
 var sj = so = 0;
 var og = "ORDI WIN > > >";
@@ -50,6 +49,9 @@ function playerChoice(id){
 
 function gameStart(x){
   var ordi = parseInt((Math.random()*300)/100);
+
+  document.getElementById("imgJoueur").src = "img/PiFeCi_Joueur_"+choix[x]+".jpg";
+  document.getElementById("imgOrdi").src = "img/PiFeCi_Ordi_"+choix[ordi]+".jpg";
 
   // --> x et ordi = 0/1/2
   // console.log(x, ordi);
